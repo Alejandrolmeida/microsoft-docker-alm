@@ -1,0 +1,38 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: qloapps
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5 
+  template:
+    metadata:
+      labels:
+        app: qloapps
+    spec:
+      containers:
+      - name: qloapps
+        image: alejandrolmeida.azurecr.io/qloapps:v1
+        ports:
+          - containerPort: 80
+            name: http
+          - containerPort: 22
+            name: ssh
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: qloapps
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      name: http
+    - port: 22
+      name: ssh  
+  selector:
+    app: qloapps
