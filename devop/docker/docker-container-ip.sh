@@ -3,19 +3,20 @@
 usage()
 {
     cat <<END
-dockerGetContainerIP.sh: Este script obtiene las IP de los contenedores que ejecutan la imagen facilitada por parametro
-Parameters:
-  -i | --image <docker image> 
-    Especifica la imagen que va a buscarse entre los contenedores (p.e. -i azurebrains.valetkey.webapi:latest)
-  -h | --help
-    Muestra esta ayuda
-Para la correcta ejecucion de este script es necesario tener las herramientas cliente CLI de Docker instaladas y el demonio de Docker corriendo.
-Para mas informacion https://docs.docker.com
+  dockerGetContainerIP.sh: Este script obtiene las IP de los contenedores que ejecutan la imagen facilitada por parametro
+  Parameters:
+    -i | --image <docker image> 
+      Especifica la imagen que va a buscarse entre los contenedores (p.e. -i azurebrains.valetkey.webapi:latest)
+    -h | --help
+      Muestra esta ayuda
+  Para la correcta ejecucion de este script es necesario tener las herramientas cliente CLI de Docker instaladas y el demonio de Docker corriendo.
+  Para mas informacion https://docs.docker.com
+
 END
 }
 
 # Definicion de variables
-image_id="azurebrains.valetkey.webapi:latest"
+image_id=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -30,13 +31,21 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Obtenemos el ID del contenedor por el nombre de la imagen
+if [[ ! $image_id ]]; then
+    echo ''
+    echo '  USO INCORRECTO. Debe especificar una imagen'
+    echo ''
+    usage
+    exit 3
+fi
 container_id=$(docker ps -a -q --filter ancestor=$image_id)
 
 if [[ ! $container_id ]]; then
-    echo 'Debe existir al menos un contenedor ejecutando la imagen especificada'
+    echo ''
+    echo '  CONTENEDOR NO ENCONTRADO. Debe existir al menos un contenedor ejecutando la imagen especificada'
     echo ''
     usage
-    exit 3./
+    exit 4
 fi
 
 # Obtenemos la IP de los contenedores que ejecutan la imagen seleccionada
