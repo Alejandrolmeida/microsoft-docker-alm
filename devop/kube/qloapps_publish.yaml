@@ -20,8 +20,8 @@ spec:
         ports:
           - containerPort: 80
             name: http
-          - containerPort: 22
-            name: ssh
+          - containerPort: 3306
+            name: mysql
 ---
 apiVersion: v1
 kind: Service
@@ -32,7 +32,7 @@ spec:
   ports:
     - port: 80
       name: http
-    - port: 22
-      name: ssh  
+    - port: 3306
+      name: mysql  
   selector:
     app: qloapps
