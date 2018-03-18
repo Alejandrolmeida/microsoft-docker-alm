@@ -1,0 +1,16 @@
+1. Hacemos login con nuestro Servicio Principal
+
+    $ az-service-login.sh
+
+2. Hacemos login en el servicio Azure Container Registry
+
+    $ az-acr-login.sh
+
+1. Etiquetamos una imagen y la enviamos 
+
+    $ docker tag webkul/qloapps_docker alejandrolmeida.azurecr.io/qloapps_docker:v1
+    $ docker push alejandrolmeida.azurecr.io/qloapps:v1
+
+2. Consultamos las imagenes que tenemos en el repositorio
+
+    $ az acr repository list --name alejandrolmeida --output table

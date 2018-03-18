@@ -1,0 +1,44 @@
+1. Hacemos login con nuestro Servicio Principal
+
+    az-service-login.sh
+
+2. Hacemos login en nuestro cluster de Kubernetes (AKS)
+    
+    az-aks-login.sh
+
+3. Mostramos la configuracion 
+
+    az aks show --resource-group microsoft-docker-alm --name kubecluster
+
+4. Actualizamos el Servicio
+
+    az aks upgrade --resource-group microsoft-docker-alm --name kubecluster --kubernetes-version "1.9.2"
+
+3. Probamos la conexion mostrando los nodos del cluster
+
+    kubectl get nodes
+ 
+4. Creamos nuestro archivo de manifiesto de publicación
+    
+    nano qloapps_publish.yaml
+
+12. Publicamos la implementacion en el cluster
+    
+    kubectl create -f ~/github/Alejandrolmeida/microsoft-docker-alm/devop/kube/qloapps_publish.yaml
+    kubectl create -f ~/github/Alejandrolmeida/microsoft-docker-alm/devop/kube/virtual-kubelet-test.yaml
+
+13. Comprobamos la ejecucion
+    
+    kubectl get service qloapps --watch
+
+14. Mostramos el Dashboard
+    
+    az aks browse --resource-group microsoft-docker-alm --name kubecluster
+
+15. Eliminamos la implementacion del cluster
+    
+    kubectl delete -f ~/github/Alejandrolmeida/microsoft-docker-alm/devop/kube/qloapps_publish.yaml
+
+17. Elimnamos los recursos
+    
+    az aks delete --resource-group microsoft-docker-alm  --name kubecluster --y   
