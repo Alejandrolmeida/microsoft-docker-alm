@@ -55,15 +55,8 @@ if [[ ! $NODE_COUNT ]]; then
   exit 1
 fi 
 
-jsonValue() 
-{
-    KEY=$1
-    num=$2
-    awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'$KEY'\042/){print $(i+1)}}}' | tr -d ' ' | tr -d '"'
-}
-
-APP_ID=$(cat ~/.azure/serviceprincipal.json | jsonValue displayName)
-SECRET=$(cat ~/.azure/mycredentials.json | jsonValue clientSecret)
+APP_ID=$(cat ~/.azure/mycredentials.json  | jq -r ".clientId")
+SECRET=$(cat ~/.azure/mycredentials.json  | jq -r ".clientSecret")
 
 ## CLUSTER KUBERNETES
     # Creamos el cluster    
@@ -72,9 +65,9 @@ SECRET=$(cat ~/.azure/mycredentials.json | jsonValue clientSecret)
         --name $NAME \
         --node-count $NODE_COUNT \
         --generate-ssh-keys \
-        --service-principal "http://"$APP_ID \
+        --service-principal $APP_ID \
         --client-secret $SECRET \
-        --kubernetes-version "1.9.2"        
+        --kubernetes-version "1.9.2" 
 
     # Guardamos la configuracion del servicio
     echo $(az aks show --resource-group $RESOURCE_GROUP --name $NAME) > ~/.azure/aksConfig.json
@@ -87,7 +80,7 @@ SECRET=$(cat ~/.azure/mycredentials.json | jsonValue clientSecret)
     # Configuramos Tiller (Helm debe estar instalado)
     helm init 
 
-    # # Creamos el conector para ACS
+    # # Creamos el conector para ACI
     # # Antes de activar esto leer:
     # # https://blog.jcorioland.io/archives/2017/11/27/how-to-use-azure-container-instance-connector-kubernetes-with-container-service-aks.html
     # # https://www.danielstechblog.info/deploying-kubernetes-aci-connector-aks-managed-kubernetes-azure/

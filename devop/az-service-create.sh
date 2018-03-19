@@ -23,10 +23,6 @@ usage()
     -h | --help
       Muestra esta ayuda
 
-  Nota:    
-    Para la correcta ejecucion de este script es necesario tener las herramientas cliente CLI de Docker instaladas y el demonio de Docker corriendo.
-    Para mas informacion https://docs.docker.com
-
 END
 }
 
@@ -64,13 +60,6 @@ fi
 echo "Guardando credenciales en ~/.azure/mycredentials.json"
 echo $JSON > ~/.azure/mycredentials.json
 
-jsonValue() 
-{
-    KEY=$1
-    num=$2
-    awk -F"[,:}]" '{for(i=1;i<=NF;i++){if($i~/'$KEY'\042/){print $(i+1)}}}' | tr -d ' ' | tr -d '"'
-}
-
-CLIENT_ID=$(echo $JSON | jsonValue clientId)
+CLIENT_ID=$(echo $JSON | jq -r ".clientId")
 echo "Guardando configuracion en ~/.azure/serviceprincipal.json"
 az ad sp show --id $CLIENT_ID > ~/.azure/serviceprincipal.json 
