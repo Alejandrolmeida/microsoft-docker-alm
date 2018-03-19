@@ -77,9 +77,6 @@ SECRET=$(cat ~/.azure/mycredentials.json  | jq -r ".clientSecret")
         --resource-group $RESOURCE_GROUP \
         --name $NAME
 
-    # Configuramos Tiller (Helm debe estar instalado)
-    helm init 
-
     # # Creamos el conector para ACI
     # # Antes de activar esto leer:
     # # https://blog.jcorioland.io/archives/2017/11/27/how-to-use-azure-container-instance-connector-kubernetes-with-container-service-aks.html
