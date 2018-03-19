@@ -1,6 +1,11 @@
 # microsoft-docker-alm
 This repository contains examples and support practices for my conference about how to apply the Application Lifecycle in Docker containers with Microsoft tools.
 
+## Table of contents
+1. [Setup Environment](1.%20Setup%20Environment.md)
+2. [Run on Azure Container Registry](2.%20Run%20on%20Azure%20Container%20Registry.md)
+3. [Run on Kubernetes Cluster](3.%20Run%20on%20Kubernetes%20Cluster.md)
+
 ## Disclaimer 
 This disclaimer informs readers that the views, thoughts, and opinions expressed in the text belong solely to the author, and not necessarily to the author’s employer, organization, committee or other group or individual.
 
