@@ -16,9 +16,9 @@ spec:
        imagePullPolicy: Always
        env:
        - name: WSID
-         value: <WSID>
+         value: aa89aa6a-aade-4742-bffc-88376cbf09cc
        - name: KEY
-         value: <KEY>
+         value: aa89aa6a-aade-4742-bffc-88376cbf09cc
        securityContext:
          privileged: true
        ports:
