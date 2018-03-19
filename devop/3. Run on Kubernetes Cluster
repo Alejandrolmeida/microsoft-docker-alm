@@ -24,8 +24,7 @@
 
 12. Publicamos la implementacion en el cluster
     
-    kubectl create -f ~/github/Alejandrolmeida/microsoft-docker-alm/devop/kube/qloapps_publish.yaml
-    kubectl create -f ~/github/Alejandrolmeida/microsoft-docker-alm/devop/kube/virtual-kubelet-test.yaml
+    kubectl create -f ~/github/Alejandrolmeida/microsoft-docker-alm/devop/kube/azure-vote.yaml
 
 13. Comprobamos la ejecucion
     

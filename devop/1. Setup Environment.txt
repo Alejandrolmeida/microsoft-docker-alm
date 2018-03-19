@@ -1,27 +1,35 @@
-1. Hacemos login interactivo en Azure para crear el Servicio Principal (posteriormente haremos login con el Servicio Principal)
+1. Instalamos jq (necesario para los scripts)
+   https://stedolan.github.io/jq/download/
+
+    $ sudo apt-get install jq
+
+2. Instalamos Azure cli
+   https://docs.microsoft.com/es-es/cli/azure/install-azure-cli?view=azure-cli-latest
+
+3. Hacemos login interactivo en Azure para crear el Servicio Principal (posteriormente haremos login con el Servicio Principal)
 
     $ az login
 
-2. Create a service principal in tenant and owner permissions on subscription 
+3. Create a service principal in tenant and owner permissions on subscription 
    https://docs.microsoft.com/en-us/cli/azure/ad/sp?view=azure-cli-latest#az_ad_sp_create_for_rbac
 
     $ ./az-service-create.sh -p kubealm-sp -s "MCT Alejandro Almeida" -r owner
 
-3. Login with a service principal
+4. Login with a service principal
    https://docs.microsoft.com/es-es/cli/azure/authenticate-azure-cli?view=azure-cli-latest#logging-in-with-a-service-principal
    
     $ ./az-login-service.sh
 
-4. Create an Azure Resource Group 
+5. Create an Azure Resource Group 
    https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az_group_create
 
     $ az group create -l eastus -n microsoft-docker-alm
 
-5. Create a Azure Container Registry instance
+6. Create a Azure Container Registry instance
 
     $ az-acr-create.sh -l eastus -g microsoft-docker-alm -n alejandrolmeida -s Basic
 
-6. Creamos el cluster de Kubernetes en Azure (AKS)
+7. Creamos el cluster de Kubernetes en Azure (AKS)
 
     # Registramos el servicio de AKS
     $ az provider register -n Microsoft.ContainerService
