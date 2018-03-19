@@ -17,7 +17,7 @@ fi
 
 az aks browse \
         --resource-group $RESOURCE_GROUP \
-        --name $NAME
+        --name $NAME &
 
 
 #az aks show -g microsoft-docker-alm --name kubecluster -o json | jq -r ".servicePrincipalProfile.clientId"
