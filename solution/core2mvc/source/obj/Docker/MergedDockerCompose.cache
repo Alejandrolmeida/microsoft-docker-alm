@@ -1,0 +1,11 @@
+services:
+  core2.mvc:
+    build:
+      context: C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\core2mvc\source
+      dockerfile: Core2.MVC/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: core2mvc
+    ports:
+    - 80/tcp
+version: '3.0'

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  dotnettourofheroes:
+    image: dotnettourofheroes
+    build:
+      context: .
+      dockerfile: donetangular/Dockerfile
+    ports:
+     - "8080:80"

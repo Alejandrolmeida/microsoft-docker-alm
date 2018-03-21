@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  core2.mvc:
+    image: core2mvc:latest
+    build: 
+      context: ./source
+      dockerfile: ./Core2.MVC/Dockerfile
+    ports:
+     - "80:80"

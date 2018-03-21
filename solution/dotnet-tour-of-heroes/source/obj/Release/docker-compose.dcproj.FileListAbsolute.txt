@@ -1,0 +1,1 @@
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\dotnet-tour-of-heroes\source\obj\Release\docker-compose.dcproj.CoreCompileInputs.cache

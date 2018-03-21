@@ -1,0 +1,1 @@
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\source\Step1\obj\Release\docker-compose.dcproj.CoreCompileInputs.cache
