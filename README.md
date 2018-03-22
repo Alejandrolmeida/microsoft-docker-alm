@@ -2,7 +2,7 @@
 Este repositorio contiene una guia y con ejemplos de codigo para facilitar la adaptacion al Ciclo de Vida de Aplicaciones (ALM) con Docker y tecnología Microsoft.
 
 ## Table of contents
-1. [Configuracion del entorno de trabajo](1.%20Setup%20Environment.md)
+1. [Configuracion del entorno](1.%20Setup%20Environment.md)
 2. [Practicando con Azure Container Registry](2.%20Run%20on%20Azure%20Container%20Registry.md)
 3. [Practicando con Kubernetes en Azure](3.%20Run%20on%20Kubernetes%20Cluster.md)
 4. [Creando un servidor MSSQL en HA (Alta Disponibilidad) en Kubernetes](4.%20Create%20HA_MSSQL.md)
