@@ -1,5 +1,5 @@
 # microsoft-docker-alm
-This repository contains examples and support practices for my conference about how to apply the Application Lifecycle in Docker containers with Microsoft tools.
+Este repositorio contiene una guia y con ejemplos de codigo para facilitar la adaptacion al Ciclo de Vida de Aplicaciones (ALM) con Docker y tecnología Microsoft.
 
 ## Table of contents
 1. [Setup Environment](1.%20Setup%20Environment.md)
