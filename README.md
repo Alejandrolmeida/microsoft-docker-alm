@@ -6,7 +6,6 @@ Gracias a la comunidad de desarrolladores @TenerifeDev tenemos disponible un vid
 
 La visualizacion de esta charla puede facilitar el entendimiendo y uso de los recursos de este repositorio por lo que recomiendo su visualizacion antes de proseguir con las guias:
 
-
 [![Modernizando la entrega de aplicaciones dockerizadas](http://img.youtube.com/vi/R_SjPmI6adk/1.jpg)](https://www.youtube.com/watch?v=R_SjPmI6adk&feature=youtu.be&t=4030)
 
 ## Tabla de contenidos
