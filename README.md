@@ -1,8 +1,8 @@
 # microsoft-docker-alm
 Este repositorio contiene una guia y con ejemplos de codigo para facilitar la adaptacion al Ciclo de Vida de Aplicaciones (ALM) con Docker y tecnología Microsoft.
 
----
-| Table of contents |
+## Tabla de contenidos
+| Indice |
 | :--- |
 | 1. [Introducción](README.md) |
 | 2. [Configuración del entorno](1.%20Setup%20Environment.md) |
