@@ -40,6 +40,6 @@ spec:
     apiVersion: apps/v1beta1
     kind: Deployment
     name: core2mvc-deployment
-  minReplicas: 3
-  maxReplicas: 6
+  minReplicas: 20
+  maxReplicas: 40
   targetCPUUtilizationPercentage: 20

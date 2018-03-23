@@ -4,7 +4,7 @@ apiVersion: v1
 metadata:
   name: sqlsecret
 type: Opaque
-data:
+data: 
   sapassword: UGFzc3dvcmQxMjM0
 ---
 kind: StorageClass
@@ -36,7 +36,7 @@ metadata:
   name: sqlserverstatefulset
 spec:
   serviceName: sqlservice
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:

@@ -6,9 +6,9 @@ FROM microsoft/aspnetcore-build:1.0 AS build
 WORKDIR /src
 COPY dotnet-tour-of-heroes.sln ./
 COPY donetangular/dotnet-tour-of-heroes.csproj donetangular/
-RUN npm install
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
+RUN npm install
 WORKDIR /src/donetangular
 RUN dotnet build -c Release -o /app
 
