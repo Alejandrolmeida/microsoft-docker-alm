@@ -1,8 +1,16 @@
 # microsoft-docker-alm
 Este repositorio contiene una guia y con ejemplos de codigo para facilitar la adaptacion al Ciclo de Vida de Aplicaciones (ALM) con Docker y tecnología Microsoft.
 
+## Charla en @TenerifeDev en Youtube
+Gracias a la comunidad de desarrolladores @TenerifeDev tenemos disponible un video con mi charla sobre como modernizar la entrega de aplicaciones dockerizadas con el nuevo servicio de Microsoft Azure Container Services (AKS). 
+
+La visualizacion de esta charla puede facilitar el entendimiendo y uso de los recursos de este repositorio por lo que recomiendo su visualizacion antes de proseguir con las guias:
+
+
+[![Modernizando la entrega de aplicaciones dockerizadas](http://img.youtube.com/vi/R_SjPmI6adk/1.jpg)](https://www.youtube.com/watch?v=R_SjPmI6adk&feature=youtu.be&t=3975)
+
 ## Tabla de contenidos
-| Indice |
+| Índice |
 | :--- |
 | 1. [Introducción](README.md) |
 | 2. [Configuración del entorno](1.%20Setup%20Environment.md) |
