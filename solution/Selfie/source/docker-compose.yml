@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  selfie.frontend:
+    image: selfiefrontend
+    build:
+      context: .
+      dockerfile: Selfie.Frontend/Dockerfile
+
+  selfie.backend:
+    image: selfiebackend
+    build:
+      context: .
+      dockerfile: Selfie.Backend/Dockerfile
+
+  azurebrains.storage.valetkey:
+    image: storagevaletkey
+    build:
+      context: .
+      dockerfile: Azurebrains.Storage.ValetKey/Dockerfile
+
+  mssql:
+    image: alejandrolmeida.azurecr.io/selfiemssql:v2
+    environment:
+      - 'SA_PASSWORD=Password1234'
+      - 'ACCEPT_EULA=Y'
+
+  azurite:
+    image: alejandrolmeida.azurecr.io/azurite:v1

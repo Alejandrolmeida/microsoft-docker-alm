@@ -1,0 +1,21 @@
+authtoken: KQ7P6iCkfuCNVnC4zLab_7a3QrFWjEX697MwoVP6UX
+region: eu
+tunnels:
+  selfiefrontend:
+    proto: http
+    addr: 80
+    host-header: rewrite
+    hostname: selfie.eu.ngrok.io
+    bind_tls: false
+  selfiebackend:
+    proto: http
+    addr: 5000
+    host-header: rewrite
+    subdomain: backend.selfie
+    bind_tls: false
+  azuriteblob:
+    proto: http
+    addr: 10000
+    host-header: rewrite
+    subdomain: blob.selfie
+    bind_tls: false

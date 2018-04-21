@@ -1,9 +1,0 @@
-version: '3.1'
-services:
-  weapsyweb:
-    image: weapsyweb:latest
-    build: 
-      context: ./source
-      dockerfile: ./src/Weapsy.Web/Dockerfile
-    ports:
-     - "80:80"

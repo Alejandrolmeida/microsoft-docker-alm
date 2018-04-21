@@ -1,0 +1,47 @@
+---
+kind: Deployment
+apiVersion: apps/v1beta1
+metadata:
+  name: storagevaletkey-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: storagevaletkey
+    spec:
+      containers:
+      - name: storagevaletkey
+        image: alejandrolmeida.azurecr.io/storagevaletkey:v2
+        ports:
+        - containerPort: 5001
+        resources:
+          requests:
+            cpu: 1m
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: storagevaletkey-service
+  annotations: 
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 5001
+  selector:
+    app: storagevaletkey
+---
+kind: HorizontalPodAutoscaler
+apiVersion: autoscaling/v1
+metadata:
+  name: storagevaletkey-hpa
+  namespace: default
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1beta1
+    kind: Deployment
+    name: storagevaletkey-deployment
+  minReplicas: 20
+  maxReplicas: 40
+  targetCPUUtilizationPercentage: 60

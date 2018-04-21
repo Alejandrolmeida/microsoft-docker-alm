@@ -1,0 +1,14 @@
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\bin\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.deps.json
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\bin\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.runtimeconfig.json
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\bin\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.runtimeconfig.dev.json
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\bin\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.dll
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\bin\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.pdb
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\bin\Debug\netcoreapp2.0\Azurebrains.mimeDetective.dll
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\bin\Debug\netcoreapp2.0\Azurebrains.mimeDetective.pdb
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\obj\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.csprojResolveAssemblyReference.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\obj\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.csproj.CoreCompileInputs.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\obj\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.AssemblyInfoInputs.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\obj\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.AssemblyInfo.cs
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\obj\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.csproj.CopyComplete
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\obj\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.dll
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey\obj\Debug\netcoreapp2.0\Azurebrains.Storage.ValetKey.pdb

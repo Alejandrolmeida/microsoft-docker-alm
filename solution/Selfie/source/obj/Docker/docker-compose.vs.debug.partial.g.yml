@@ -1,0 +1,58 @@
+version: '3.4'
+
+services:
+  azurebrains.storage.valetkey:
+    image: storagevaletkey:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_azurebrains.storage.valetkey$
+    volumes:
+      - C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.Storage.ValetKey:/app
+      - C:\Users\aleja\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_azurebrains.storage.valetkey$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_azurebrains.storage.valetkey$ bin/Debug/netcoreapp2.0/Azurebrains.Storage.ValetKey.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+  selfie.backend:
+    image: selfiebackend:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_selfie.backend$
+    volumes:
+      - C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend:/app
+      - C:\Users\aleja\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_selfie.backend$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_selfie.backend$ bin/Debug/netcoreapp2.0/Selfie.Backend.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+
+  selfie.frontend:
+    image: selfiefrontend:dev
+    build:
+      target: base
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_selfie.frontend$
+    volumes:
+      - C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Frontend:/app
+      - C:\Users\aleja\vsdbg\vs2017u5:/remote_debugger:ro
+#$nuget_volume_mapping_selfie.frontend$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_selfie.frontend$ bin/Debug/netcoreapp2.0/Selfie.Frontend.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+

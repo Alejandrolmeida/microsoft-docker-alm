@@ -1,0 +1,12 @@
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\bin\Debug\netcoreapp2.0\Selfie.Backend.deps.json
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\bin\Debug\netcoreapp2.0\Selfie.Backend.runtimeconfig.json
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\bin\Debug\netcoreapp2.0\Selfie.Backend.runtimeconfig.dev.json
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\bin\Debug\netcoreapp2.0\Selfie.Backend.dll
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\bin\Debug\netcoreapp2.0\Selfie.Backend.pdb
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\obj\Debug\netcoreapp2.0\Selfie.Backend.csprojResolveAssemblyReference.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\obj\Debug\netcoreapp2.0\Selfie.Backend.csproj.CoreCompileInputs.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\obj\Debug\netcoreapp2.0\Selfie.Backend.AssemblyInfoInputs.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\obj\Debug\netcoreapp2.0\Selfie.Backend.AssemblyInfo.cs
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\obj\Debug\netcoreapp2.0\Selfie.Backend.dll
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Selfie.Backend\obj\Debug\netcoreapp2.0\Selfie.Backend.pdb

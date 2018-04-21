@@ -1,0 +1,9 @@
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\bin\Debug\netcoreapp2.0\Azurebrains.mimeDetective.deps.json
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\bin\Debug\netcoreapp2.0\Azurebrains.mimeDetective.dll
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\bin\Debug\netcoreapp2.0\Azurebrains.mimeDetective.pdb
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\obj\Debug\netcoreapp2.0\Azurebrains.mimeDetective.csprojResolveAssemblyReference.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\obj\Debug\netcoreapp2.0\Azurebrains.mimeDetective.csproj.CoreCompileInputs.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\obj\Debug\netcoreapp2.0\Azurebrains.mimeDetective.AssemblyInfoInputs.cache
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\obj\Debug\netcoreapp2.0\Azurebrains.mimeDetective.AssemblyInfo.cs
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\obj\Debug\netcoreapp2.0\Azurebrains.mimeDetective.dll
+C:\Users\aleja\source\Github\Alejandrolmeida\microsoft-docker-alm\solution\Selfie\source\Azurebrains.mimeDetective\obj\Debug\netcoreapp2.0\Azurebrains.mimeDetective.pdb

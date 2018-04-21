@@ -1,0 +1,213 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-app="selfie" ng-controller="SelfieController" >
+    <div ng-controller="SupportController"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10
+                        col-sm-offset-3 col-sm-6
+                        col-md-offset-4 col-md-5
+                        col-lg-offset-4 col-lg-4">
+                <h1>The Best Selfie</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10
+                        col-sm-offset-3 col-sm-6
+                        col-md-offset-4 col-md-5
+                        col-lg-offset-4 col-lg-4">
+                <img class="img-responsive" alt="Superman haciendose un selfie" id="image" src="/img/superman.gif" />
+                
+            </div>
+        </div>
+        <div class="row" style="padding-bottom: 20px;">            
+            <div class="col-xs-offset-1 col-xs-10
+                        col-sm-offset-3 col-sm-6
+                        col-md-offset-4 col-md-5
+                        col-lg-offset-4 col-lg-4 ">
+                <h2>
+                    Bienvenidos al concurso "The&nbsp;Best&nbsp;Selfie"
+                </h2>
+                <h3>
+                    ¡Env&iacute;anos tu mejor selfie y participa!
+                </h3>
+                <h4>
+                    Seleccionaremos el ganador entre todos los selfies recibidos durante el evento. Recuerda que debes darle al boton de abajo (de la cámara) para enviar tu foto y rellenar tus datos para que se active el boton de enviar!
+                </h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10
+                        col-sm-offset-3 col-sm-6
+                        col-md-offset-4 col-md-5
+                        col-lg-offset-4 col-lg-4 ">
+                <span class="glyphicon {{ imagenEstado1 }} imagen-encima"></span>
+                <span class="btn btn-default btn-file">
+                    <img class="img-responsive" src="/img/photo_button.svg" />
+                    <input type="file" id="fichero1" file-model="myFile1" accept="image/*">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <form id="formID" class="container-fluid form-horizontal" role="form">
+        <fieldset>
+            <div class="form-group {{ resultID.value }}">
+                <label class="control-label
+                       col-xs-offset-1 col-xs-10
+                       col-sm-offset-0 col-sm-3
+                       col-md-4
+                       col-lg-4" for="documento">Nombre:</label>
+                <div class="
+                     col-xs-offset-1 col-xs-10
+                     col-sm-offset-0 col-sm-6
+                     col-md-5
+                     col-lg-4">
+                    <input type="text" class="form-control" id="documento" placeholder="Introduzca su nombre" ng-model="user.UserID" ng-keyup="funcValidaID(user.UserID)" ng-blur="funcValidaID(user.UserID)" />
+                    <span class="glyphicon glyphicon-{{ resultID.icon }} form-control-feedback"></span>
+                </div>
+            </div>
+
+            <div class="form-group {{ resultEmail.value }}">
+                <label class="control-label
+                     col-xs-offset-1 col-xs-10
+                     col-sm-offset-0 col-sm-3
+                     col-md-4
+                     col-lg-4" for="email">Correo Electrónico:</label>
+                <div class="
+                     col-xs-offset-1 col-xs-10
+                     col-sm-offset-0 col-sm-6
+                     col-md-5
+                     col-lg-4">
+                    <input type="text" class="form-control" id="email" placeholder="Introduzca su correo electr&oacute;nico" ng-model="user.email" ng-keyup="funcValidaEmail(user.email)" ng-blur="funcValidaEmail(user.email)" />
+                    <span class="glyphicon glyphicon-{{ resultEmail.icon }} form-control-feedback"></span>
+                </div>
+            </div>
+
+            <div class="form-group {{ resultTelefono.value }}">
+                <label class="control-label
+                       col-xs-offset-1 col-xs-10
+                       col-sm-offset-0 col-sm-3
+                       col-md-4
+                       col-lg-4" for="telefono">Tel&eacute;fono:</label>
+                <div class="
+                       col-xs-offset-1 col-xs-10
+                       col-sm-offset-0 col-sm-6
+                       col-md-5
+                       col-lg-4">
+                    <input type="text" class="form-control" id="telefono" placeholder="Introduzca su tel&eacute;fono (opcional)" ng-model="user.telefono" ng-keyup="funcValidaTelefono(user.telefono)" ng-blur="funcValidaTelefono(user.telefono)" />
+                    <span class="glyphicon glyphicon-{{ resultTelefono.icon }} form-control-feedback"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="
+                     col-xs-offset-1 col-xs-10
+                     col-sm-offset-3 col-sm-6
+                     col-md-offset-4 col-md-5
+                     col-lg-4">
+                    <div class=" checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="acepta">
+                            Estoy conforme con lo dispuesto en la
+                            <span id="clausula" ng-click="funcMostarClausulas(true)" class="text-primary"><ins>cl&aacute;usula</ins></span>
+                            de Protecci&oacute;n de Datos.
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="
+                     col-xs-offset-2 col-xs-8
+                     col-sm-offset-4 col-sm-4
+                     col-md-offset-4
+                     col-lg-4" style="text-align:center;">
+                    <button class="btn-lg" ng-disabled="(!formIsValid()) || (!acepta)" ng-click="funcUploadForm(true)">Enviar&nbsp;mis&nbsp;datos&nbsp;ahora</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Enviando las im&aacute;genes</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div>
+                        <span>Por favor espere hasta que el proceso este completado.<br /></span>
+                    </div>
+
+                    <div style="padding:20px 20px 0 20px">
+                        <div style="display:block;">
+                            <span id="fileUploadProgress1" style="width:0" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                                  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            </span>
+                        </div>
+                    </div>
+                    <div style="padding:0px 20px 0 20px">
+                        <div style="display:block;">
+                            <span id="fileUploadProgress2" style="width:0" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                                  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            </span>
+                        </div>
+                    </div>
+                    <div style="padding:0px 20px 0 20px">
+                        <div id="mensajeEnvio" class="alert alert-success" role="alert" style="text-align:center">
+                            <span id="mensajeCarga">{{ mensajeFinSubida }}</span>
+                            <p style="margin-top: 10px"><button type="button" class="btn btn-success" ng-show="mostrarCapaCerrar" data-dismiss="modal">Cerrar</button></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="clausulaModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <span>{{clausula}}<br /></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="MensajeError" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <span>{{mensageError}}<br /></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

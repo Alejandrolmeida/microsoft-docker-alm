@@ -1,0 +1,45 @@
+---
+kind: Deployment
+apiVersion: apps/v1beta1
+metadata:
+  name: selfiebackend-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: selfiebackend
+    spec:
+      containers:
+      - name: selfiebackend
+        image: alejandrolmeida.azurecr.io/selfiebackend:v2
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: 1m
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: selfiebackend-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 5000
+  selector:
+    app: selfiebackend
+---
+kind: HorizontalPodAutoscaler
+apiVersion: autoscaling/v1
+metadata:
+  name: selfiebackend-hpa
+  namespace: default
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1beta1
+    kind: Deployment
+    name: selfiebackend-deployment
+  minReplicas: 10
+  maxReplicas: 20
+  targetCPUUtilizationPercentage: 60
