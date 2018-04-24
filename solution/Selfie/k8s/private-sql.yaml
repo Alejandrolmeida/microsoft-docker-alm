@@ -35,15 +35,15 @@ apiVersion: apps/v1beta1
 metadata:
   name: sqlserverstatefulset
 spec:
-  serviceName: sqlservice
+  serviceName: mssql
   replicas: 1
   template:
     metadata:
       labels:
-        app: sqlinux
+        app: mssql
     spec:
       containers:
-        - name: sqlinux
+        - name: mssql
           image: alejandrolmeida.azurecr.io/selfiemssql:v2
           ports:
             - containerPort: 1433
@@ -67,11 +67,11 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: sqlservice
+  name: mssql
   annotations: 
     service.beta.kubernetes.io/azure-load-balancer-internal: "true"
   labels:
-    app: sqlservice
+    app: mssql
 spec:
   type: LoadBalancer
   ports:
@@ -79,6 +79,6 @@ spec:
     port: 1433
     targetPort: 1433
   selector:
-    app: sqlinux          
+    app: mssql          
 
           

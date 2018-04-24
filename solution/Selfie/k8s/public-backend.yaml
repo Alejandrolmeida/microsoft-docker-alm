@@ -12,9 +12,9 @@ spec:
     spec:
       containers:
       - name: selfiebackend
-        image: alejandrolmeida.azurecr.io/selfiebackend:v2
+        image: alejandrolmeida.azurecr.io/selfiebackend:v3
         ports:
-        - containerPort: 5000
+        - containerPort: 80
         resources:
           requests:
             cpu: 1m
@@ -24,9 +24,10 @@ apiVersion: v1
 metadata:
   name: selfiebackend-service
 spec:
+  loadBalancerIP: 52.170.193.47
   type: LoadBalancer
   ports:
-  - port: 5000
+  - port: 80
   selector:
     app: selfiebackend
 ---
@@ -40,6 +41,6 @@ spec:
     apiVersion: apps/v1beta1
     kind: Deployment
     name: selfiebackend-deployment
-  minReplicas: 10
+  minReplicas: 1
   maxReplicas: 20
   targetCPUUtilizationPercentage: 60
