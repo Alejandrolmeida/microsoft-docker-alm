@@ -55,8 +55,8 @@ if [[ ! $NODE_COUNT ]]; then
   exit 1
 fi 
 
-APP_ID=$(cat ~/.azure/mycredentials.json  | jq -r ".clientId")
-SECRET=$(cat ~/.azure/mycredentials.json  | jq -r ".clientSecret")
+APP_ID=$(cat ~/.azure_alm/mycredentials.json  | jq -r ".clientId")
+SECRET=$(cat ~/.azure_alm/mycredentials.json  | jq -r ".clientSecret")
 
 ## CLUSTER KUBERNETES
     # Creamos el cluster    
@@ -70,7 +70,7 @@ SECRET=$(cat ~/.azure/mycredentials.json  | jq -r ".clientSecret")
         --kubernetes-version "1.9.2" 
 
     # Guardamos la configuracion del servicio
-    echo $(az aks show --resource-group $RESOURCE_GROUP --name $NAME) > ~/.azure/aksConfig.json
+    echo $(az aks show --resource-group $RESOURCE_GROUP --name $NAME) > ~/.azure_alm/aksConfig.json
 
     # Conectamos con el cluster
     az aks get-credentials \

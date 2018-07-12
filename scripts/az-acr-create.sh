@@ -79,10 +79,10 @@ fi
         --name $CONTAINER_REGISTRY_NAME
 
     # Guardamos la configuracion del servicio
-    echo $(az acr show --name $CONTAINER_REGISTRY_NAME --resource-group $RESOURCE_GROUP) > ~/.azure/acrConfig.json
+    echo $(az acr show --name $CONTAINER_REGISTRY_NAME --resource-group $RESOURCE_GROUP) > ~/.azure_alm/acrConfig.json
 
     # Guardamos las credenciales del servicio
-    echo $(az acr credential show -n $CONTAINER_REGISTRY_NAME --resource-group $RESOURCE_GROUP) > ~/.azure/acrCredentials.json
+    echo $(az acr credential show -n $CONTAINER_REGISTRY_NAME --resource-group $RESOURCE_GROUP) > ~/.azure_alm/acrCredentials.json
 
     # Guardamos la configuracion del registro por defecto
     az configure --defaults acr=$CONTAINER_REGISTRY_NAME 

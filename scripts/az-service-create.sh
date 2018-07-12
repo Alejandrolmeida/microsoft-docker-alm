@@ -52,14 +52,14 @@ fi
 JSON=$(az ad sp create-for-rbac --name $SERVICE_PRINCIPAL_NAME --sdk-auth --scopes /subscriptions/${SUBSCRIPTION_ID//\"} --role $ROLE)
 
 if [[ ! $JSON ]]; then  
-  echo "No se ha podido crear el fichero de configuracion del servicio principal en  ~/.azure/mycredentials.json"
+  echo "No se ha podido crear el fichero de configuracion del servicio principal en  ~/.azure_alm/mycredentials.json"
   usage
   exit 1
 fi 
 
-echo "Guardando credenciales en ~/.azure/mycredentials.json"
-echo $JSON > ~/.azure/mycredentials.json
+echo "Guardando credenciales en ~/.azure_alm/mycredentials.json"
+echo $JSON > ~/.azure_alm/mycredentials.json
 
 CLIENT_ID=$(echo $JSON | jq -r ".clientId")
-echo "Guardando configuracion en ~/.azure/serviceprincipal.json"
-az ad sp show --id $CLIENT_ID > ~/.azure/serviceprincipal.json 
+echo "Guardando configuracion en ~/.azure_alm/serviceprincipal.json"
+az ad sp show --id $CLIENT_ID > ~/.azure_alm/serviceprincipal.json 

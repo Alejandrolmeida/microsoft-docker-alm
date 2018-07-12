@@ -1,16 +1,16 @@
 #!/bin/bash
 
-RESOURCE_GROUP=$(cat ~/.azure/aksConfig.json | jq -r ".resourceGroup")
-NAME=$(cat ~/.azure/aksConfig.json | jq -r ".name")
+RESOURCE_GROUP=$(cat ~/.azure_alm/aksConfig.json | jq -r ".resourceGroup")
+NAME=$(cat ~/.azure_alm/aksConfig.json | jq -r ".name")
 
 if [[ ! $RESOURCE_GROUP ]]; then  
-  echo "No se encuetra definicion de RESOURCE_GROUP. Revise el documento ~/.azure/azureregistry.json"
+  echo "No se encuetra definicion de RESOURCE_GROUP. Revise el documento ~/.azure_alm/azureregistry.json"
   usage
   exit 1
 fi 
 
 if [[ ! $NAME ]]; then  
-  echo "No se encuetra definicion de NAME. Revise el documento ~/.azure/azureregistry.json"
+  echo "No se encuetra definicion de NAME. Revise el documento ~/.azure_alm/azureregistry.json"
   usage
   exit 1
 fi 
